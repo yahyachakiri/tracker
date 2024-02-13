@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "noUnusedLocals": true,
+        "forceConsistentCasingInFileNames": true,
+        "noUnusedParameters": true,
+        "esModuleInterop": true,
+        "allowJs": true,
+        "jsx": "preserve",
+        "lib": ["DOM", "ESNext"],
+        "moduleResolution": "node",
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "target": "ESNext",
+        "baseUrl": ".",
+        "paths": {
+            "@interfaces/*": ["src/interfaces/*"],
+            "@utils/*": ["src/utils/*"],
+            "@components/*": ["src/components/*"],
+            "@ui/*": ["src/components/ui/*"],
+            "@icons/*": ["src/components/ui/icons/*"],
+            "@bar/*": ["src/components/ui/bar/*"],
+            "@cards/*": ["src/components/cards/*"],
+            "@hooks": ["src/hooks/*", "src/hooks/index"],
+            "@middlewares": ["src/middlewares/*", "src/middlewares/index"],
+            "@/*": ["src/*"]
+        },
+        "incremental": true,
+        "module": "esnext",
+        "isolatedModules": true
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+}

@@ -1,0 +1,11 @@
+export { default as Icon } from './Icon';
+export { default as TopIcon } from './TopIcon';
+export { default as SideIcon } from './SideIcon';
+export { default as BottomIcon } from './BottomIcon';
+export { default as DashboardIcon } from './DashboardIcon';
+export { default as AchievementsIcon } from './AchievementsIcon';
+export { default as WorkIcon } from './WorkIcon';
+export { default as HabitsIcon } from './HabitsIcon';
+export { default as ToDoListIcon } from './ToDoListIcon';
+export { default as CalendarIcon } from './CalendarIcon';
+export { default as EmailIcon } from './EmailIcon';

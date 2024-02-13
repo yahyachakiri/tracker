@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: inherit;
+}
+
+/* input.outline-red:focus {
+    outline-color: #ff4f79 !important;
+} */
+
+@layer base {
+    /* * {
+        @apply outline-red;
+    } */
+    body {
+        @apply min-h-screen text-white bg-background;
+    }
+    main {
+        @apply bg-background;
+    }
+    .transition {
+        @apply duration-200;
+    }
+    img {
+        @apply select-none;
+    }
+    input[type='number'],
+    input[type='text'] {
+        @apply focus:bg-focus;
+    }
+    .loader {
+        @apply w-3.5 h-3.5 rounded-full inline-block absolute top-[28%] right-3.5 box-border bg-gradient-to-r from-second from-30% to-white to-100% animate-[rotation_1s_linear_infinite];
+    }
+    .loader::after {
+        @apply content-['']	box-border absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[65%] h-[65%] rounded-full bg-second;
+    }
+    @media (max-height: 564px) {
+        .sidebar {
+            @apply absolute !important;
+        }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 639px) {
+    .radial-progress {
+        --size: 70px !important;
+        --thickness: 5px !important;
+        outline-width: 5px;
+        outline-offset: -5px;
+    }
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.checkbox:disabled {
+    border-color: hsl(var(--su) / var(--tw-border-opacity)) !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+}
